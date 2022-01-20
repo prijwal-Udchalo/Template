@@ -309,20 +309,20 @@ input[id="conform-army-checkbox"] {
   margin-bottom: 1rem;
 }
 
-.showing-result-for ul{
+.showing-result-for ul,.showing-result-for p{
   padding: 1.5rem 1rem;
   background-color: #F5FFF9;
 
   border: 1px solid rgba(84, 84, 84, 0.15);
   border-radius: 5px;
 }
-.showing-result-for ul p{
+.showing-result-for ul h2{
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
 
-.showing-result-for ul li{
+.showing-result-for ul li,.showing-result-for p{
   font-size: 1.7rem;
   list-style: none;
   list-style-image: url("img/greenTick.svg");
