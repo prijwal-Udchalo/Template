@@ -13,7 +13,10 @@
     <!-- Adding font owesome file -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <!-- Adding iconify -->
     
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
 
     <!-- Adding font -->
 
@@ -61,7 +64,256 @@
 
     <!------------------ Search bar ----------------->
     
+    <form class="search-container">
+      <!-- Trip type selection option -->
+      <label class="trip-type-label">Trip Type</label>
+      <div class="trip-options">
+        <span>
+          <input
+            class="radio-custom"
+            id="oneway"
+            name="tripType"
+            type="radio"
+            value="oneway"
+          />
+          <label class="radio-custom-label active" for="oneway"
+            >One way</label
+          >
+        </span>
+        <span class="radio-spacing">
+          <input
+            class="radio-custom"
+            id="roundtrip"
+            name="tripType"
+            type="radio"
+            value="roundtrip"
+          />
+          <label class="radio-custom-label" for="roundtrip">Round trip</label>
+        </span>
+      </div>
+      <!-- end of Trip type selection option -->
+      <!-- second selection option -->
+      <div class="data-fields">
+        <div class="form-data-input">
+          <label for="origin">Origin*</label>
 
+          <div class="input-container">
+            <input autocomplete="off" type="text" class="origin-input" />
+            <div class="swap-btn">
+              <span
+                class="iconify iconify-swap"
+                style="transform: rotate(0deg) scale(1)"
+                data-icon="charm:swap-horizontal"
+              ></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-data-input">
+          <label for="destination">Destination*</label>
+
+          <div class="input-container">
+            <input autocomplete="off" type="text" class="destination-input" />
+          </div>
+        </div>
+        <div class="form-data-input travel-date-data">
+          <label for="departDate">Travel Date*</label>
+
+          <div class="selectiongroup">
+            <input
+              autocomplete="off"
+              autocorrect="off"
+              type="date"
+              style="font-size: 14px"
+              class="calender-input"
+            />
+            <!-- <span class="iconify" data-icon="mdi:calendar-month"></span> -->
+            <button type="button" class="active">Today</button>
+            <button type="button">Tomorrow</button>
+          </div>
+        </div>
+
+        <div class="form-data-input traveller-data-container">
+          <label for="travellers">Travellers*</label>
+          <div class="input-container">
+            <input
+              class="text-input travellers-input"
+              readonly="readonly"
+              type="text"
+              value="1 Ad, 0 Ch, 0 In, Eco"
+            />
+          </div>
+          <div class="traverller-overlay">
+            <div class="traveller-overlay-tabs-group">
+              <button type="button" class="traveller-tab active">
+                Economy
+              </button>
+              <button type="button" class="traveller-tab">
+                Premium Economy
+              </button>
+              <button type="button" class="traveller-tab">Business</button>
+            </div>
+            <div class="traveller-details">
+              <!-- single detail -->
+              <div class="traveller-detail-single">
+                <span> Adults (Above 12 years) </span>
+                <div class="traveller-detail-container">
+                  <div class="traveller-detail-icon minus-icon">
+                    <span class="iconify" data-icon="mdi:minus"></span>
+                  </div>
+                  <span class="traveller-data-count adults-count">1</span>
+                  <div class="traveller-detail-icon plus-icon">
+                    <span class="iconify" data-icon="mdi:plus"></span>
+                  </div>
+                </div>
+              </div>
+              <!-- end of  single detail -->
+              <!-- single detail -->
+              <div class="traveller-detail-single">
+                <span> Children (2-12 years) </span>
+                <div class="traveller-detail-container">
+                  <div class="traveller-detail-icon minus-icon">
+                    <span class="iconify" data-icon="mdi:minus"></span>
+                  </div>
+                  <span class="traveller-data-count children-count">0</span>
+                  <div class="traveller-detail-icon plus-icon">
+                    <span class="iconify" data-icon="mdi:plus"></span>
+                  </div>
+                </div>
+              </div>
+              <!-- end of  single detail -->
+              <!-- single detail -->
+              <div class="traveller-detail-single">
+                <span> Infants (Below 2 years) </span>
+                <div class="traveller-detail-container">
+                  <div class="traveller-detail-icon minus-icon">
+                    <span class="iconify" data-icon="mdi:minus"></span>
+                  </div>
+                  <span class="traveller-data-count infants-count">0</span>
+                  <div class="traveller-detail-icon plus-icon">
+                    <span class="iconify" data-icon="mdi:plus"></span>
+                  </div>
+                </div>
+              </div>
+              <!-- end of  single detail -->
+            </div>
+          </div>
+        </div>
+        <button class="search-btn" type="button">
+          <span>Search</span>
+        </button>
+        <div class="form-data-input mobile-cabin-class">
+          <label for="cabinType">Cabin Class</label>
+          <div
+            class="traveller-overlay-tabs-group mobile-cabin-class-buttons"
+          >
+            <button type="button" class="traveller-tab active">
+              Economy
+            </button>
+            <button type="button" class="traveller-tab">
+              Premium Economy
+            </button>
+            <button type="button" class="traveller-tab">Business</button>
+          </div>
+        </div>
+      </div>
+      <!-- end  second selection option -->
+
+      <!-- defence forces checkbox  -->
+      <div class="form-defence-data">
+        <div class="control-checkbox">
+          <div>
+            <input
+              class="checkbox-custom"
+              form-control-name="isDefence"
+              id="isDefenceSearch"
+              type="checkbox"
+              style="font-size: 15px"
+            />
+            <label class="checkbox-custom-label" for="isDefenceSearch"
+              >I am from the Defence Forces
+            </label>
+          </div>
+          <div class="question-icon">
+            <span
+              class="iconify"
+              data-icon="ant-design:question-circle-outlined"
+            ></span>
+          </div>
+          <div class="overlaypanel-content-container">
+            <span class="overlaypanel-content"
+              >Use this option if you are, a serving/retired personnel of the
+              Indian Armed Forces or Indian Paramilitary Forces. You may also
+              select this option if you are valid Dependent
+              (Spouse/Child/Parent) of a serving/retired Indian Armed Forces
+              and Indian Paramilitary Forces Personnel.
+              <b>
+                note valid military ID will be required for all passengers at
+                Airline's check-in counter for tickets booked using this
+                option.
+              </b></span
+            >
+          </div>
+        </div>
+      </div>
+      <!-- end of defence forces checkbox -->
+      <!-- defence forces selection option -->
+      <div class="form-defence-options" style="display: none">
+        <label class="defence-options-tagline" for="userCategory"
+          >User Category
+          <span>(serving, retired and dependants)*</span>
+        </label>
+        <div class="defence-options-container">
+          <div class="defence-dropdown-input">
+            <input
+              class="text-input defence-input"
+              readonly="true"
+              type="text"
+              value="Indian Army"
+            />
+            <div class="defence-dropdown-icon">
+              <span class="iconify" data-icon="mdi:chevron-down"></span>
+            </div>
+          </div>
+          <!-- drop down icon -->
+
+          <div class="defence-dropdown-container" style="display: none">
+            <ul class="defence-dropdown-list">
+              <li class="defence-dropdown-item">
+                <span class="defence-dropdown-item-value">Indian Army</span>
+              </li>
+              <li class="defence-dropdown-item">
+                <span class="defence-dropdown-item-value">Indian Navy</span>
+              </li>
+              <li class="defence-dropdown-item">
+                <span class="defence-dropdown-item-value"
+                  >Indian Air Force</span
+                >
+              </li>
+              <li class="defence-dropdown-item">
+                <span class="defence-dropdown-item-value"
+                  >Indian Coast Guard</span
+                >
+              </li>
+              <li class="defence-dropdown-item">
+                <span class="defence-dropdown-item-value"
+                  >Paramilitary Forces</span
+                >
+              </li>
+              <li class="defence-dropdown-item">
+                <span class="defence-dropdown-item-value"
+                  >Under Trainee Cadets</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <button class="search-btn mobile-search-btn" type="button">
+        <span>Search Flights</span>
+      </button>
+      <!-- end of defence forces selection option -->
+    </form>
     <!-- <div class="search-bar ">
 
 
@@ -885,4 +1137,6 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
     
   </body>
+  <script src="script.js"></script>
+
 </html>
